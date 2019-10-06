@@ -12,11 +12,11 @@ int64_t multimod_p1(int64_t a, int64_t b, int64_t m) {
     sign++;
 	b=-b;
   }
-  int sum = 0;
+  int64_t sum = 0;
   int ad = 0;
-  int tmp = 1;
-  int rs1 = b%m;
-  printf("rs1 : %d",rs1);
+  int64_t tmp = 1;
+  int64_t rs1 = b%m;
+  printf("rs1 : %ld",rs1);
   for(int i=0; i<64; i++){
     ad = 1&a ;
 	printf("ad : %ld\n",a);
@@ -24,7 +24,7 @@ int64_t multimod_p1(int64_t a, int64_t b, int64_t m) {
 	tmp = tmp << i;
 	tmp *= ad;
 	tmp = tmp%m;
-	printf("tmp : %d",tmp);
+	printf("tmp : %ld",tmp);
 	sum += rs1 * tmp;
 	tmp = 1;
   }
