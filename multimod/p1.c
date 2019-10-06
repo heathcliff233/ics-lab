@@ -1,5 +1,5 @@
 #include "multimod.h"
-
+#include <stdlib.h>
 int64_t multimod_p1(int64_t a, int64_t b, int64_t m) {
   // TODO: implement
   int sign = 0;
@@ -19,7 +19,7 @@ int64_t multimod_p1(int64_t a, int64_t b, int64_t m) {
   printf("rs1 : %d",rs1);
   for(int i=0; i<64; i++){
     ad = 1&a ;
-	printf("ad : %d\n",a);
+	printf("ad : %ld\n",a);
 	a = a >> 1;
 	tmp = tmp << i;
 	tmp *= ad;
